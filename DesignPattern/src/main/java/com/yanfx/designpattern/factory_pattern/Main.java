@@ -3,8 +3,9 @@ package com.yanfx.designpattern.factory_pattern;
 public class Main {
 
 	public static void main(String[] args) {
-		Factory.getShape("CIRCLE").draw();
-		Factory.getShape("RECTANGLE").draw();
-		Factory.getShape("SQUARE").draw();
+		ShapeFactory sf = new ShapeFactory();
+		sf.getShape(Factory.CIRCLE.getName()).draw();
+		sf.getShape(Factory.RECTANGLE.getName()).draw();
+		sf.getShape(Factory.SQUARE.getName()).draw();
 	}
 }
